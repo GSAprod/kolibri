@@ -23,4 +23,10 @@ module.exports = [
       entry: './assets/src/my_downloads/views/MyDownloadsSideNavEntry.js',
     },
   },
+  {
+    bundle_id: 'local_library_app',
+    webpack_config: {
+      entry: './assets/src/local_library/app.js',
+    },
+  },
 ];

@@ -18,10 +18,12 @@ export const PageNames = {
 
 export const ExternalPageNames = {
   MY_DOWNLOADS: 'MY_DOWNLOADS',
+  LOCAL_LIBRARY: 'LOCAL_LIBRARY',
 };
 
 export const ExternalPagePaths = {
   [ExternalPageNames.MY_DOWNLOADS]: '/my-downloads',
+  [ExternalPageNames.LOCAL_LIBRARY]: '/local-library',
 };
 
 export const ClassesPageNames = {

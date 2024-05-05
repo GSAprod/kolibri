@@ -1288,6 +1288,12 @@ export const coreStrings = createTranslator('CommonCoreStrings', {
     context: '',
   },
 
+  // Local library management
+  localLibraryLabel: {
+    message: 'My local library',
+    context: "Users can manage their content on the 'local library' menu",
+  },
+
   // Device upgrades recommended
   userDevicesUsingIE11: {
     message: 'Some users seem to have accessed Kolibri via Internet Explorer 11',
