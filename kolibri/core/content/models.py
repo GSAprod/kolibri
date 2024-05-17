@@ -216,6 +216,14 @@ class ContentNode(base_models.ContentNode):
     # needs a subsequent Kolibri upgrade step to backfill these values.
     admin_imported = models.BooleanField(null=True)
 
+    # This resource has been added directly to this Kolibri server, i.e. someone
+    # responsible for administering the device (or a teacher) created a node to store
+    # information meant solely for the classes and students who access this server,
+    # instead of adding the content to Studio, and then downloading it to the device.
+    # Set as a NullBooleanField to limit migration time in creating the new column,
+    # needs a subsequent Kolibri upgrade step to backfill these values.
+    local_only = models.NullBooleanField(default=False)
+
     objects = ContentNodeManager()
 
     class Meta:
@@ -388,6 +396,8 @@ class ChannelMetadata(base_models.ChannelMetadata):
     partial = models.BooleanField(null=True, default=False)
 
     objects = ChannelMetadataQueryset.as_manager()
+
+    local_only = models.NullBooleanField(default=False)
 
     class Admin:
         pass
