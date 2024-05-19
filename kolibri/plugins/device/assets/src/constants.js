@@ -4,6 +4,7 @@ export const PageNames = {
   USER_PERMISSIONS_PAGE: 'USER_PERMISSIONS_PAGE',
   DEVICE_INFO_PAGE: 'DEVICE_INFO_PAGE',
   DEVICE_SETTINGS_PAGE: 'DEVICE_SETTINGS_PAGE',
+  MANAGE_LOCAL_LIBRARY_PAGE: 'MANAGE_LOCAL_LIBRARY_PAGE',
   REARRANGE_CHANNELS: 'REARRANGE_CHANNELS',
   DELETE_CHANNELS: 'DELETE_CHANNELS',
   EXPORT_CHANNELS: 'EXPORT_CHANNELS',
@@ -60,6 +61,7 @@ export const pageNameToModuleMap = {
   [PageNames.MANAGE_PERMISSIONS_PAGE]: 'managePermissions',
   [PageNames.USER_PERMISSIONS_PAGE]: 'userPermissions',
   [PageNames.DEVICE_INFO_PAGE]: 'deviceInfo',
+  [PageNames.MANAGE_LOCAL_LIBRARY_PAGE]: 'manageLocalLibrary',
 };
 
 export const LandingPageChoices = {

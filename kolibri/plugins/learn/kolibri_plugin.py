@@ -90,17 +90,6 @@ class MyDownloadsAsset(webpack_hooks.WebpackBundleHook):
         }
 
 @register_hook
-class LocalLibraryAsset(webpack_hooks.WebpackBundleHook):
-    bundle_id = "local_library_app"
-
-    @property
-    def plugin_data(self):
-        return {
-            "setLimitForAutodownload": get_device_setting("set_limit_for_autodownload"),
-            "limitForAutodownload": get_device_setting("limit_for_autodownload"),
-        }
-
-@register_hook
 class LearnContentNodeHook(ContentNodeDisplayHook):
     def node_url(self, node):
         kind_slug = None

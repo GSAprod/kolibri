@@ -5,12 +5,14 @@ import { showDeviceInfoPage } from '../modules/deviceInfo/handlers';
 import { showManagePermissionsPage } from '../modules/managePermissions/handlers';
 import { showManageContentPage } from '../modules/manageContent/handlers';
 import { showUserPermissionsPage } from '../modules/userPermissions/handlers';
+import { showManageLocalLibraryPage } from '../modules/manageLocalLibrary/handlers';
 import DeleteExportChannelsPage from '../views/ManageContentPage/DeleteExportChannelsPage';
 import DeviceInfoPage from '../views/DeviceInfoPage';
 import DeviceSettingsPage from '../views/DeviceSettingsPage';
 import FacilitiesPage from '../views/FacilitiesPage';
 import FacilitiesTasksPage from '../views/FacilitiesPage/FacilitiesTasksPage';
 import ManageContentPage from '../views/ManageContentPage';
+import ManageLocalLibraryPage from '../views/ManageLocalLibraryPage';
 import ManagePermissionsPage from '../views/ManagePermissionsPage';
 import ManageTasksPage from '../views/ManageTasksPage';
 import NewChannelVersionPage from '../views/ManageContentPage/NewChannelVersionPage';
@@ -50,6 +52,15 @@ const routes = [
       } else {
         next();
       }
+    },
+  },
+  {
+    name: PageNames.MANAGE_LOCAL_LIBRARY_PAGE,
+    component: withAuthMessage(ManageLocalLibraryPage, 'contentManager'),
+    path: '/local-library',
+    handler: ({ name }) => {
+      store.dispatch('preparePage', { name });
+      showManageLocalLibraryPage(store).then(hideLoadingScreen);
     },
   },
   {

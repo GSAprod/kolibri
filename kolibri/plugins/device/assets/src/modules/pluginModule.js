@@ -4,6 +4,7 @@ import deviceInfo from './deviceInfo';
 import manageContent from './manageContent';
 import managePermissions from './managePermissions';
 import userPermissions from './userPermissions';
+import manageLocalLibrary from './manageLocalLibrary';
 
 export default {
   state() {
@@ -72,5 +73,7 @@ export default {
     manageContent,
     //Facility configurations for pin setup
     facilityConfig,
+    // MANAGE_LOCAL_LIBRARY_PAGE
+    manageLocalLibrary,
   },
 };

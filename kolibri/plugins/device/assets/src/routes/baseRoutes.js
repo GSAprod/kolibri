@@ -5,6 +5,10 @@ export default {
     name: PageNames.MANAGE_CONTENT_PAGE,
     path: '/content',
   },
+  local_library: {
+    name: PageNames.MANAGE_LOCAL_LIBRARY_PAGE,
+    path: '/local-library',
+  },
   permissions: {
     name: PageNames.MANAGE_PERMISSIONS_PAGE,
     path: '/permissions',

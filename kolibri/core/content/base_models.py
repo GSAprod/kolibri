@@ -136,6 +136,9 @@ class ContentNode(MPTTModel):
         "Language", blank=True, null=True, on_delete=models.CASCADE
     )
 
+    # This field checks whether the channel was created locally or imported from Studio instead
+    local_only = models.BooleanField(default=False)
+
     # A JSON Dictionary of properties to configure loading, rendering, etc. the file
     options = JSONField(default={}, blank=True, null=True)
 
@@ -257,6 +260,9 @@ class ChannelMetadata(models.Model):
     # Minimum version of Kolibri that this content database is compatible with
     min_schema_version = models.CharField(max_length=50)
     root = models.ForeignKey("ContentNode", on_delete=models.CASCADE)
+
+    # This field checks whether the channel was created locally or imported from Studio instead
+    local_only = models.BooleanField(default=False)
 
     class Meta:
         abstract = True
