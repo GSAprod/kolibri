@@ -63,6 +63,7 @@ class ChannelMetadataSerializer(serializers.ModelSerializer):
             "last_updated",
             "lang_code",
             "lang_name",
+            "local_only",
             "name",
             "root",
             "thumbnail",
